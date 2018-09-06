@@ -12,13 +12,17 @@ class Counter extends Component {
         <button onClick = { () => this.props.increment_amount(20) }> Increment Amount 20</button>
         <button onClick = { () => this.props.zero() }> Zero </button>
         <button onClick = { () => this.props.decrement() }> Decrement </button>                
+
+        <br/>
+        <h1>{this.props.user.name}</h1>        
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  counter: state.counter
+  counter: state.counter,
+  user: state.user
 });
 
 const mapDispatchToProps = {

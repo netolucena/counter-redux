@@ -52,9 +52,26 @@ const counter = (state = 0, action) => {
   }
 }
 
+const history = (state = [], action) => {
+  switch (action.type) {    
+    default:
+      return state;
+  }
+}
+
+const user = (state = {name: "Neto"}, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
+
+
 
 const reducers = combineReducers({
-  counter
+  counter,
+  history,
+  user
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
